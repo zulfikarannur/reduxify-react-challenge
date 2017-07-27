@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import { getAPOD } from '../actions'
+import { getAPODAsyncHandler } from '../actions'
 
 class APOD extends Component {
   constructor (props) {
@@ -56,7 +56,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addAPODdata: (APODdata) => dispatch(getAPOD(APODdata))
+    addAPODdata: (APODdata) => dispatch(getAPODAsyncHandler(APODdata))
   }
 }
 
