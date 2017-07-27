@@ -9,7 +9,7 @@ const APODreducer = (state = initialState, action) => {
         APODdata: action.payload.APODdata
       }
     default:
-      state
+      return state
   }
 }
 export default APODreducer

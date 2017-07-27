@@ -4,7 +4,12 @@ import { connect } from 'react-redux'
 import { getAPOD } from '../actions'
 
 class APOD extends Component {
-
+  constructor (props) {
+    super(props)
+    this.state = {
+      APODdata: {}
+    }
+  }
   componentWillMount () {
   }
 
@@ -12,8 +17,9 @@ class APOD extends Component {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=3Qo4akjdvDQvy8Zhjf4ADK2IkIjkoS4FddhFRytQ')
     .then((data) => {
       this.setState({
-        APOD: data.data
+        APODdata: data.data
       })
+      this.props.addAPODdata(this.state.APODdata)
     })
     .catch((err) => {
       console.log(err)

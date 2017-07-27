@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import './App.css'
 import 'bulma/css/bulma.css'
 
-import store from '../stores'
+import store from './stores'
 
 import APOD from './components/APOD'
 import NeoWS from './components/NeoWS'
@@ -20,7 +20,7 @@ class App extends Component {
             <div className='App'>
               <div className='navbar'>
                 <div className='navbar-brand'>
-                  <img className='img-brand' src='https://www.nasa.gov/sites/default/files/images/nasaLogo-570x450.png" alt="NASA' />
+                  <img className='img-brand' src='https://www.nasa.gov/sites/default/files/images/nasaLogo-570x450.png' alt='NASA' />
                 </div>
                 <div className='navbar-menu'>
                   <div className='navbar-start'>
